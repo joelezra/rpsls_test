@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* clear defaults*/
+* {box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+/*Element Styles*/
+html {
+    margin: 0px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+    background-color: snow;
+}
+/*For visibility, remove later*/
+div {
+    /* border: red 1px solid; */
+    display: flex;
+}
+
+/* Utility Class Styling*/
+.flx-column {
+    display: flex;
+    flex-direction: column;
+}
+.flx-row{
+    display: flex;
+    flex-direction: row;
+}
+.align-center{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+.hide-at-start{
+    display: none;
+}
+
+#mobile {
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.col-2 {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+    width: 70vw;
+}
+
+.fixedWidth {
+    width: 30vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 1.9rem;
+    padding-left: 10vw;
+
+}
+
+button { 
+    background-color: snow;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+/*Main Container and Title*/
+.main-container{
+    height: 100vh;
+
+}
+#game-title{
+    
+    height: 10vh;
+    vertical-align: middle;
+    justify-content: center;
+}
+.game-title h1 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+#messageplayer {
+    padding-bottom: 5px;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+
+
+
+#player-name {
+    width: 260px;
+    position: relative;
+    text-align: center;
+    align-self: center;
+
+}
+
+/*Gamer area Styles*/
+.game-container {
+    /* text-align: center;
+    align-self: center; */
+}
+
+.player-choice{
+    height: 50vh;
+    width: 25vw;
+    margin: auto;
+}
+.player-chosen {
+    position: relative;
+    height: 50vh;
+    width: 100px;
+}
+.computer-chosen{
+    position: relative;
+    height: 50vh;
+    width: 100px;
+}
+.choice-button{
+    height: 10vh;
+    width: 25vw;
+    font-size: 2em;
+}
+/* Relative positions so can slide via JS*/
+.computer-turn {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.player-turn {
+    position: absolute;
+    height: 10vh;
+    top: 0px;
+    width: 100%;
+}
+
+.computer-choice {
+    height: 10vh;
+}
+
+.col-12 {
+    justify-content: center;
+}
+
+/* p#player-turn-text, p#computer-turn{
+    margin: auto;
+    line-height: 10vh;
+} */
+
+/*player input stylers*/
+#player-input-div{
+    /* width: 260px; */
+    
+}
+
+
+/*Results and score area*/
+
+.result {
+    width: 260px;
+}
+.win-caret{width: 100px;}
+.score {
+    width: 260px;
+    text-align: center;
+}
+
+#score-lost, #score-won, #score-drew {
+    margin-left: 3px;
+}
+
+/*rules modal*/
+/* .rules  {
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 8vh;
+} */
+
+.rules-btn-container {
+    position: fixed;
+    top: 5vh;
+    right: 7vw;
+    z-index: 999;
+}
+
+.start-container {
+    position: fixed;
+    bottom: 10vh;
+
+}
+
+.btn-circular {
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    text-align: center;
+    font-weight: 600;
+    padding: 2vh 3vw;
+}
+
+.modal-hide{
+    display: none;
+    height: 100vh;
+    width: 100vh;
+    position: absolute;
+    left:0;
+    top: 0;
+}
+/*Media Queries*/
+
+/*Smallest screens*/
+@media screen and (max-width:580px) {
+    h1{
+        font-size: 1.2em;
+        letter-spacing: .1px;
+        font-weight: 600;
+    }
+    .player-choice{
+            margin: auto;
+            flex-direction: column;
+        }
+    }
+
+    #largeScreen {
+        display: none;
+    }
+
+@media screen and (min-width:581px) {
+    #mobile {
+        display: none;
+    }
+
+    h1{
+        font-size: 1.5em;
+        letter-spacing: .1px;
+        font-weight: 600;
+    }
+
+    #largeScreen {
+        display: flex;
+
+    }
+}
